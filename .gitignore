@@ -1,0 +1,35 @@
+# Magento generated files
+/generated/
+/var/
+!/var/.htaccess
+/pub/static/
+!/pub/static/.htaccess
+/pub/media/*
+!/pub/media/.htaccess
+
+# Composer files
+/vendor/
+
+# Environment files
+# /app/etc/env.php
+# /app/etc/config.php # Có thể giữ lại nếu bạn dùng config split qua Git
+
+# OS / IDE / Editor junk
+.DS_Store
+.idea/
+*.iml
+*.log
+*.swp
+*.swo
+
+# PHPStorm / VSCode
+/.vscode/
+/.phpstorm.meta.php
+
+# Node, npm, frontend
+/node_modules/
+/package-lock.json
+/yarn.lock
+
+# PHPUnit cache
+.phpunit.result.cache
