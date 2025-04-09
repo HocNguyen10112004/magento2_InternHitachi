@@ -7,8 +7,10 @@
  */
 
 use Magento\Framework\App\Bootstrap;
-
+// phpinfo();
+// die();
 try {
+    
     require __DIR__ . '/../app/bootstrap.php';
 } catch (\Exception $e) {
     echo <<<HTML
