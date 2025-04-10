@@ -379,6 +379,7 @@ return [
         'PayPal_BraintreeGiftWrapping' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Week1_Bai2' => 1,
+        'Week1_Eventobserver' => 1,
         'Week1_Helloworld' => 1
     ]
 ];
