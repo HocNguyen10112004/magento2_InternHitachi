@@ -380,6 +380,8 @@ return [
         'PayPal_BraintreeGraphQl' => 1,
         'Week1_Bai2' => 1,
         'Week1_Eventobserver' => 1,
-        'Week1_Helloworld' => 1
+        'Week1_Helloworld' => 1,
+        'Week2_Helloworld' => 1,
+        'Week2_PluginInterceptor' => 1
     ]
 ];

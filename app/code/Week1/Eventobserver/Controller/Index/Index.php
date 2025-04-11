@@ -18,6 +18,7 @@ class Index extends \Magento\Framework\App\Action\Action
 		$this->_eventManager->dispatch('week1_eventobserver_display_text', ['mp_text' => $textDisplay]);
 		echo $textDisplay; // vẫn in ra "Mageplaza"
 		exit;
+		
 	}
 
 }
