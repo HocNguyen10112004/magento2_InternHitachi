@@ -17,6 +17,9 @@ class OrderObserver implements ObserverInterface
 
     public function execute(Observer $observer)
     {
+      
+        $this->logger->info('Observer called!');
+
         // Lấy đối tượng đơn hàng
         $order = $observer->getEvent()->getOrder();
 
