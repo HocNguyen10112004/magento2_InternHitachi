@@ -86,5 +86,13 @@ return [
     ],
     'install' => [
         'date' => 'Fri, 04 Apr 2025 05:03:03 +0000'
-    ]
+    ],
+    //enable log
+    'dev' => [
+        'log' => [
+            'file' => [
+                'enabled' => true,  // Đảm bảo rằng logging được bật
+            ]
+        ]
+    ],
 ];
