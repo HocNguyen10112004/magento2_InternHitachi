@@ -13,10 +13,13 @@
             <resource ref="anonymous"/>
         </resources>
     </route>
-    <!-- <route url="/V1/dev/order" method="POST">
-        <service class="Dev\RestApi\Api\OrderCreateInterface" method="createOrder"/>
+    <route url="/V1/dev-restapi/order" method="POST">
+        <service class="Dev\RestApi\Api\OrderRepositoryInterface" method="createOrder"/>
         <resources>
-            <resource ref="anonymous" />
+            <resource ref="anonymous"/>
         </resources>
-    </route> -->
+        <data>
+            <parameter name="orderRequest" force="true">%Dev\RestApi\Api\RequestOrderInterface</parameter>
+        </data>
+    </route>
 </routes>
