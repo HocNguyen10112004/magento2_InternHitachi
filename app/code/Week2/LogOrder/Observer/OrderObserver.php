@@ -19,7 +19,6 @@ class OrderObserver implements ObserverInterface
     {
       
         $this->logger->info('Observer called!');
-        die($this->logger.mylog1);        // Lấy đối tượng đơn hàng
         $order = $observer->getEvent()->getOrder();
 
         // Ghi log thông tin đơn hàng

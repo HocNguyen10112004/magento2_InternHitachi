@@ -18,8 +18,6 @@
         <resources>
             <resource ref="anonymous"/>
         </resources>
-        <data>
-            <parameter name="orderRequest" force="true">%Dev\RestApi\Api\RequestOrderInterface</parameter>
-        </data>
+        
     </route>
 </routes>

@@ -1,24 +1,8 @@
 <?php
-
-namespace Dev\RestApi\Model\Api;
-
-use Dev\RestApi\Api\OrderRepositoryInterface;
-
-class OrderRepository 
-// extends \Magento\Framework\App\Helper\AbstractHelper 
-implements OrderRepositoryInterface
+namespace Dev\RestApi\Helper;
+ 
+class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
-    // protected $helper;
-
-    // public function __construct(Data $helper)
-    // {
-    //     $this->helper = $helper;
-    // }
-    // public function createOrder($orderData)
-    // {
-    //     return $this->helper->createMageOrder($orderData);
-    // }
-
     protected $_storeManager;
     protected $_product;
     protected $_formkey;
@@ -48,23 +32,23 @@ implements OrderRepositoryInterface
         $this->customerRepository = $customerRepository;
         $this->orderService = $orderService;
 
-        // parent::__construct($context);
+        parent::__construct($context);
     }
  
     /**
-     * Set descriptions for the products.
-     *
-     * @param mixed $orderData
+     * Create Order On Your Store
+     * 
+     * @param array $orderData
      * @return array
-     */
-    public function createOrder($orderData){
+     * 
+    */
+    public function createMageOrder($orderData) {
         // return $orderData['shipping_address']['firstname'];
         $store=$this->_storeManager->getStore();
         $websiteId = $this->_storeManager->getStore()->getWebsiteId();
         $customer=$this->customerFactory->create();
         $customer->setWebsiteId($websiteId);
-        // $customer->loadByEmail($orderData['email']);// load customet by email address
-        $customer->loadByEmail($orderData["email"]);
+        $customer->loadByEmail($orderData['email']);// load customet by email address
         if(!$customer->getEntityId()){
             //If not avilable then create this customer 
             $customer->setWebsiteId($websiteId)
@@ -132,3 +116,5 @@ implements OrderRepositoryInterface
         return $result;
     }
 }
+ 
+?>

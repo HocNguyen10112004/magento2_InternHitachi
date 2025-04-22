@@ -1,5 +1,4 @@
 <?php
-
 namespace Dev\RestApi\Model\Api;
 
 use Dev\RestApi\Api\RequestOrderInterface;
@@ -7,33 +6,28 @@ use Magento\Framework\DataObject;
 
 class RequestOrder extends DataObject implements RequestOrderInterface
 {
-    public function getCartItems(): array
+    public function getCurrencyId()
     {
-        return $this->getData(self::CART_ITEMS) ?? [];
+        return $this->getData(self::CURRENCY_ID);
     }
 
-    public function getAddressInformation(): array
+    public function getEmail()
     {
-        return $this->getData(self::ADDRESS_INFORMATION) ?? [];
+        return $this->getData(self::EMAIL);
     }
 
-    public function getPayment(): array
+    public function getShippingAddress()
     {
-        return $this->getData(self::PAYMENT) ?? [];
+        // sẽ trả về 1 instance of ShippingAddress
+        return $this->getData(self::SHIPPING_ADDRESS);
     }
 
-    public function setCartItems(array $cartItems): mixed
+    public function getItems()
     {
-        return $this->setData(self::CART_ITEMS, $cartItems);
+        return $this->getData(self::ITEMS);
     }
-
-    public function setAddressInformation(array $addressInfo): mixed
+    public function setCurrencyId(string $currencyId)
     {
-        return $this->setData(self::ADDRESS_INFORMATION, $addressInfo);
-    }
-
-    public function setPayment(array $payment): mixed
-    {
-        return $this->setData(self::PAYMENT, $payment);
+        $this->setData(self::CURRENCY_ID, $currencyId);
     }
 }
