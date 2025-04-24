@@ -1,0 +1,21 @@
+
+<button type="button" class="action primary" id="custom-request-button">
+    <span>Yêu cầu tư vấn</span>
+</button>
+
+<script type="text/javascript">
+require(['jquery'], function($){
+    $('#custom-request-button').on('click', function(){
+        $.ajax({
+            url: '/custombutton/product/request',
+            type: 'GET',
+            success: function(response) {
+                alert(response.message);  // Hiển thị thông điệp "Hello World"
+            },
+            error: function() {
+                alert('Đã xảy ra lỗi khi gửi yêu cầu!');
+            }
+        });
+    });
+});
+</script>

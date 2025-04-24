@@ -5,4 +5,9 @@
     <preference for="Dev\RestApi\Api\ResponseItemInterface" type="Dev\RestApi\Model\Api\ResponseItem"/>
     <preference for="Dev\RestApi\Api\OrderRepositoryInterface" type="Dev\RestApi\Model\Api\OrderRepository"/>
     <preference for="Dev\RestApi\Api\RequestOrderInterface" type="Dev\RestApi\Model\Api\RequestOrder"/>
+    <!-- <preference for="Magento\Quote\Api\ChangeQuoteControlInterface" type="Dev\RestApi\Model\BypassQuoteAccessControl"/> -->
+    <type name="Magento\Quote\Model\QuoteRepository\Plugin\AccessChangeQuoteControl">
+        <plugin name="bypass_quote_access_for_custom_api" type="Dev\RestApi\Plugin\BypassAccessChangePlugin" sortOrder="1"/>
+    </type>
+
 </config>

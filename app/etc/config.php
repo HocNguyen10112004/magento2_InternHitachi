@@ -384,6 +384,7 @@ return [
         'Week1_Helloworld' => 1,
         'Week2_Helloworld' => 1,
         'Week2_LogOrder' => 1,
-        'Week2_PluginInterceptor' => 1
+        'Week2_PluginInterceptor' => 1,
+        'Week3_CustomButton' => 1
     ]
 ];

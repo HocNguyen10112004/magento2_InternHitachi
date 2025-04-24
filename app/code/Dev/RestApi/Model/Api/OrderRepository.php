@@ -112,9 +112,9 @@ implements OrderRepositoryInterface
 
         // Collect Totals & Save Quote
         $quote->collectTotals()->save();
-        // echo '<pre>';
-        // print_r($quote->getPayment()->getData());
-        // echo '</pre>';
+        echo '<pre>';
+        print_r($quote->getPayment()->getData());
+        echo '</pre>';
         // $quote->setIsActive(true);
         // Create Order From Quote
         // if (!$quote->getIsActive()) {
